@@ -33,4 +33,28 @@
         NSLog(@"loginCallBack--code:%@,msg:%@", code, msg);
     }
 }
+
+
+- (void)childloginCallBack:(NSNotification *)notification{
+    NSDictionary *info = notification.userInfo;
+
+    NSLog(@"info---%@",info);
+
+}
+
+- (void)logoutCallBack:(NSNotification *)notification {
+
+
+}
+
+- (void)selectRoleCallBack:(NSNotification *)notification {
+    NSDictionary *info = notification.userInfo;
+    NSString *code = info[@"code"];
+    NSString *msg = info[@"msg"];
+    
+    NSLog(@"selectRoleCallBack--code:%@,msg:%@", code, msg);
+}
+
+
+
 @end
